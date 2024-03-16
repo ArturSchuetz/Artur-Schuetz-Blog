@@ -1,0 +1,73 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+image: node:18
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: "Deployment Backend to Production"
+          services:
+            - docker
+          script:
+            - cd backend
+            - docker build -t backend-nestjs-app .
+            - docker save -o backend-nestjs-app.tar backend-nestjs-app
+            - scp backend-nestjs-app.tar lilly@81.169.138.90:/home/lilly/Projects/
+            - ssh lilly@81.169.138.90 "docker volume create web_data"
+            - ssh lilly@81.169.138.90 "docker stop backend-nestjs-app || true && docker rm backend-nestjs-app || true"
+            - ssh lilly@81.169.138.90 "docker load -i /home/lilly/Projects/backend-nestjs-app.tar"
+            - ssh lilly@81.169.138.90 "docker run -d -p 1337:1337 --name backend-nestjs-app -e NODE_ENV=production -v web_data:/data backend-nestjs-app"
+      - step:
+          name: "Deployment Public Area Frontend to Production"
+          size: 2x
+          services:
+            - docker
+          script:
+            - cd frontends/public-area
+            - docker build -t frontend-public-nextjs-app .
+            - docker save -o frontend-public-nextjs-app.tar frontend-public-nextjs-app
+            - scp frontend-public-nextjs-app.tar lilly@81.169.138.90:/home/lilly/Projects/
+            - ssh lilly@81.169.138.90 "docker stop frontend-public-nextjs-app || true && docker rm frontend-public-nextjs-app || true"
+            - ssh lilly@81.169.138.90 "docker load -i /home/lilly/Projects/frontend-public-nextjs-app.tar"
+            - ssh lilly@81.169.138.90 "docker run -d -p 3000:3000 --name frontend-public-nextjs-app -e NODE_ENV=production frontend-public-nextjs-app"
+      - step:
+          name: "Deployment Admin Area Frontend to Production"
+          size: 2x
+          services:
+            - docker
+          script:
+            - cd frontends/admin-area
+            - docker build -t frontend-admin-nextjs-app .
+            - docker save -o frontend-admin-nextjs-app.tar frontend-admin-nextjs-app
+            - scp frontend-admin-nextjs-app.tar lilly@81.169.138.90:/home/lilly/Projects/
+            - ssh lilly@81.169.138.90 "docker stop frontend-admin-nextjs-app || true && docker rm frontend-admin-nextjs-app || true"
+            - ssh lilly@81.169.138.90 "docker load -i /home/lilly/Projects/frontend-admin-nextjs-app.tar"
+            - ssh lilly@81.169.138.90 "docker run -d -p 4200:4200 --name frontend-admin-nextjs-app -e NODE_ENV=production frontend-admin-nextjs-app"
+    develop:
+      - step:
+          name: "Test Backend build"
+          script:
+            - cd backend
+            - npm install
+            - npm run build
+      - step:
+          name: "Test Public Area Frontend build"
+          script:
+            - cd frontends/public-area
+            - npm install
+            - npm run build
+      - step:
+          name: "Test Admin Area Frontend build"
+          script:
+            - cd frontends/admin-area
+            - npm install
+            - npm run build
+
+definitions:
+  services:
+    docker:
+      memory: 2048

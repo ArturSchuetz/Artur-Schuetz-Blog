@@ -1,0 +1,73 @@
+{
+  "settings": {
+    "articlesPerPage": 10
+  },
+  "site": {
+    "title": "Artur Schütz Developer Blog",
+    "twitter_site": "@Artur_Schuetz",
+    "twitter_creator": "@Artur_Schuetz"
+  },
+  "author": {
+    "name": "Artur Schütz",
+    "prefix": "",
+    "postfix": "M.Sc.",
+    "degree": "M.Sc. Computer Science",
+    "title": "Software Engineer",
+    "company": "bitside GmbH",
+    "companyUrl": "https://www.bitside.de/",
+    "email": "contact@artur-schuetz.com",
+    "phone": "+49 211-2096 3028",
+    "location": "Düsseldorf, Germany",
+    "Scholarprofile": "https://scholar.google.com/citations?user=VNs4bUQAAAAJ&hl=en"
+  },
+  "socialMedia": {
+    "github": "https://github.com/ArturSchuetz",
+    "twitter": "https://twitter.com/Artur_Schuetz",
+    "facebook": "https://www.facebook.com/art.schuetz",
+    "youtube": "https://www.youtube.com/channel/UCsNTHFFLq1by_kYqgHPyTmQ",
+    "linkedin": "https://www.linkedin.com/in/arturschuetz/"
+  },
+  "aboutMeInformation": [
+    "I am a Senior Full-Stack Software Developer residing in Germany with a Master's degree in Computer Science. My journey into programming began at the young age of 13, with C++ as my foundational language. This was a time before the advent of YouTube or high-speed internet in our rural town, so most of my learning was self-guided, primarily through books.",
+    "After an initial stint with PHP and developing websites for friends and family, I delved deeper into software architecture. This phase acquainted me with design patterns like Model-View-Controller (MVC) and Model-View-ViewModel (MVVM), as well as multi-tier architectures. In pursuit of more challenging work, I transitioned to web development technologies like C#, C++, TypeScript, and JavaScript, empowered by frameworks like ASP.NET MVC, Treefrog Framework, Node.js, and Angular.",
+    "Alongside my web development endeavors, I nurtured a keen interest in game development. My focus wasn't just on implementing graphical renderers but also on exploring advanced photorealistic rendering algorithms. Even though I was highly intrigued by this field, I chose to continue my academic career, completing a degree in Computational Visualistics and a Master's in Computer Science. My research has been primarily focused on AI and image processing.",
+    "In my current role at bitside GmbH, I'm applying my specialized knowledge in practical settings, including developing scalable and efficient software. I utilize agile methodologies like SCRUM and Kanban and have acquired particular expertise in Machine Learning, an area I find tremendously fascinating. Alongside my professional responsibilities, I also maintain a range of side projects, from Python-based Machine Learning to game development in C++ with Unreal Engine 5.",
+    "I'm constantly looking for opportunities for growth and am open to constructive feedback. In my free time, I enjoy watercolor painting and am actively working to improve my Japanese language skills."
+  ],
+  "philosophyContent": [
+    "In the fast-paced world of software development, it's easy to get caught up in repetitive routines. That's why I've made it my mission to learn at least one new skill or try out a new technology with every project I work on. This approach may impact my speed in certain contexts, but it offers unique advantages. Specifically, I can provide solutions to specific and rare problems that many developersmight not be able to solve.",
+    "Moreover, my background in mathematics enables me to understand scientific papers and implement current research solutions. A notable example that demonstrates my problem-solving capabilities and mathematical aptitude is my successful simulation of Time of Flight sensors in a physically accurate manner. This not only required an in-depth understanding of the underlying physics but also a strong mathematical foundation.",
+    "This approach is not without challenges. In agile development cycles, my willingness to constantly learn could be seen as a hindrance. However, I am convinced that the long-term advantages—being able to offer versatile and sustainable solutions—more than outweigh these initial obstacles.",
+    "In summary, I'm not a developer who does things the same way every time, but I am a problem solver who can tackle a wide range of challenges. My goal is not just to write code but to create valuable, versatile solutions."
+  ],
+  "skills": [
+    {
+      "title": "3D Rendering & Graphics",
+      "text": "Deferred and Forward Rendering using DirectX, OpenGL, and Vulkan. Real-time Ray Tracing with OptiX and CUDA. Proficient in Unity3D, Unreal Engine 5, and Ogre Engine. Shader development with GLSL and HLSL. Point cloud processing and 3D camera technologies including Time of Flight and LiDAR."
+    },
+    {
+      "title": "Web Development",
+      "text": "Full-stack development: Node.js, Angular, React, Vue.js. Back-End techs: SQL, MsSQL, MySQL, PHP, Treefrog, Spring Boot, ASP.NET MVC, EntityFramework. Front-End techs: HTML5, CSS, TypeScript, JavaScript, Bootstrap, jQuery. Websockets and Signal.io for real-time communication. RESTful API design and implementation."
+    },
+    {
+      "title": "Machine Learning & AI",
+      "text": "Classical ML Algorithms: Logistic Regression, SVM, K-NN, Random Forest, Boosting. Deep Learning: CNN, RNN, LSTM, GAN, CycleGAN with TensorFlow, Keras, and PyTorch. Natural Language Processing: Spacy, Named Entity Recognition, Intention Detection. Object Detection: YOLO Human Pose Estimation and Image Classification."
+    },
+    {
+      "title": "Application & Game Development",
+      "text": "Cross-platform development with Qt in C++. Windows Application development using WPF in C#. Game logic and network programming. Responsive web development for gaming experiences. Traditional art skills applicable to technical art in games."
+    },
+    {
+      "title": "Software Architecture & Engineering",
+      "text": "MVC, MVVM, and multitier architectures. Software design patterns and functional programming. Development process optimization. Continuous Integration and Continuous Deployment. Agile methodologies including SCRUM and Kanban."
+    },
+    {
+      "title": "Data Processing & Network",
+      "text": "Parallel processing and data handling. Networking with ZeroMQ and RakNet. Data-driven software solutions."
+    },
+    {
+      "title": "Research & Academia",
+      "text": "Research focus on AI, image processing, and 3D point cloud processing. Expertise in lens distortion algorithms and camera localization."
+    }
+  ]
+}

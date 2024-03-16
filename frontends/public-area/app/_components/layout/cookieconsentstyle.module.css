@@ -1,0 +1,99 @@
+.cookieconsent {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    background: #292929;
+    z-index: 120;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.allowbutton, .declinebutton, .hidebutton, .linkbutton {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: red;
+}
+
+.allowbutton {
+    background-color: green;
+}
+
+.declinebutton {
+    background-color: red;
+}
+
+.linkbutton {
+    background-color: #555;
+}
+
+.hidebutton {
+    background-color: #555;
+}
+
+.smallhidebutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.allowbutton:hover, .declinebutton:hover, .hidebutton:hover, .linkbutton:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .cookieconsent {
+        max-width: 95%;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .allowbutton, .declinebutton, .hidebutton, .linkbutton {
+        height: 25px;
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .smallhidebutton {
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 16px;
+    }
+}

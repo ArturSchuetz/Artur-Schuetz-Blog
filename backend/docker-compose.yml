@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    image: arturs_blog
+    volumes:
+      - web_data:/data
+    ports:
+      - '1337:1337'
+volumes:
+  web_data:
