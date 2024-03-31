@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Youplay | Call of Shooter</title>
+	<meta name="description" content="Youplay - Gaming HTML Template based on Bootstrap">
+	<meta name="keywords" content="gaming, game, community, template, html, bootstrap, webpack">
+	<meta name="author" content="nK">
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- START: Styles -->
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans:400,700">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" />
+	<!-- Flickity -->
+	<link rel="stylesheet" href="assets/vendor/flickity/dist/flickity.min.css" />
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="assets/vendor/magnific-popup/dist/magnific-popup.css" />
+	<!-- Revolution Slider -->
+	<link rel="stylesheet" href="assets/vendor/slider-revolution/css/settings.css">
+	<link rel="stylesheet" href="assets/vendor/slider-revolution/css/layers.css">
+	<link rel="stylesheet" href="assets/vendor/slider-revolution/css/navigation.css">
+	<!-- Bootstrap Sweetalert -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap-sweetalert/dist/sweetalert.css" />
+	<!-- Social Likes -->
+	<link rel="stylesheet" href="assets/vendor/social-likes/dist/social-likes_flat.css" />
+	<!-- FontAwesome -->
+	<script defer src="assets/vendor/fontawesome-free/js/all.js"></script>
+	<script defer src="assets/vendor/fontawesome-free/js/v4-shims.js"></script>
+	<!-- Youplay -->
+	<link rel="stylesheet" href="assets/css/youplay-shooter.css">
+	<!-- RTL (uncomment this to enable RTL support) -->
+	<!-- <link rel="stylesheet" href="assets/css/youplay-rtl.min.css" /> -->
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/custom-shooter.css">
+	<!-- END: Styles -->
+	<link rel='stylesheet' href='/build/bundle.css'>
+	<!-- jQuery -->
+	<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+
+	<script defer src='/build/bundle.js'></script>
+</head>
+
+<body>
+	<div id="svelte-app"></div>
+	<!-- START: Scripts -->
+	<!-- Object Fit Polyfill -->
+	<script src="assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+	<!-- jQuery -->
+	<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+	<!-- Hexagon Progress -->
+	<script src="assets/vendor/HexagonProgress/jquery.hexagonprogress.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- Jarallax -->
+	<script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+	<!-- Flickity -->
+	<script src="assets/vendor/flickity/dist/flickity.pkgd.min.js"></script>
+	<!-- jQuery Countdown -->
+	<script src="assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+	<!-- Moment.js -->
+	<script src="assets/vendor/moment/min/moment.min.js"></script>
+	<script src="assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+	<!-- Revolution Slider -->
+	<script src="assets/vendor/slider-revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="assets/vendor/slider-revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- ImagesLoaded -->
+	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<!-- Isotope -->
+	<script src="assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+	<!-- Bootstrap Validator -->
+	<script src="assets/vendor/bootstrap-validator/dist/validator.min.js"></script>
+	<!-- Bootstrap Sweetalert -->
+	<script src="assets/vendor/bootstrap-sweetalert/dist/sweetalert.min.js"></script>
+	<!-- Social Likes -->
+	<script src="assets/vendor/social-likes/dist/social-likes.min.js"></script>
+	<!-- Youplay -->
+	<script src="assets/js/youplay.min.js"></script>
+	<script src="assets/js/youplay-init.js"></script>
+	<script>
+		$(".countdown").each(function () {
+			$(this).countdown($(this).attr('data-end'), function (event) {
+				$(this).html(event.strftime(['<div class="countdown-item">', '<span>Days</span>', '<span><span>%D</span></span>', '</div>', '<div class="countdown-item">', '<span>Hours</span>', '<span><span>%H</span></span>', '</div>', '<div class="countdown-item">', '<span>Minutes</span>', '<span><span>%M</span></span>', '</div>', '<div class="countdown-item">', '<span>Seconds</span>', '<span><span>%S</span></span>', '</div>'].join('')));
+			});
+		});
+	</script>
+	<!-- END: Scripts -->
+</body>
+
+</html>
